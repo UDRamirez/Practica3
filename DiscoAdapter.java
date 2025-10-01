@@ -1,6 +1,6 @@
 public class DiscoAdapter implements Producto{
 
-  private Disco disco
+    private Disco disco;
   
  public DiscoAdapter(Disco disco) {
         this.disco = disco;
