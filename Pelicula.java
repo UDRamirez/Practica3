@@ -39,7 +39,14 @@ int getDuracion(){
   return duracion;
 }
   
-void showInformacion();
+void showInformacion(){
+  System.out.println("\nPelicula: " + pelicula + 
+                    "\nDirección: " + director +
+                    "\nDuración: " + duracion + "minutos" +
+                    "\nGénero:" + genero +
+                    "\nPrecio: " + precio + "mx"
+                    "\nTrama: " + sinopsis);
+}
 
 
 }
