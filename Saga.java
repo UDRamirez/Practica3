@@ -6,17 +6,20 @@ public class Saga implements Articulo{
     private List<Articulo> articulos;
     private String genero;
 
-    public Saga(String nombre){
+    public Saga(String nombre, String genero){
         this.nombre = nombre;
+        this.genero = genero;
         this.articulos = new ArrayList<>();
-    }
-
-    public void addArticulo(Articulo articulo){
-        this.articulos.add(articulo);
     }
 
     public String getNombre(){
         return this.nombre;
+    }
+
+    public void addArticulo(Articulo articulo){
+
+        this.articulos.add(articulo);
+
     }
 
     public String getDirector(){
