@@ -336,14 +336,15 @@ public class App {
             27.0
         );
 
-        catalogo.addArticulo(disco1);
-        catalogo.addArticulo(disco2);
-        catalogo.addArticulo(disco3);
-        catalogo.addArticulo(disco4);
-        catalogo.addArticulo(disco5);
-        catalogo.addArticulo(disco6);
-        catalogo.addArticulo(disco7);
-        catalogo.addArticulo(disco8);
+    catalogo.addArticulo(new DiscoAdapter(disco1));
+    catalogo.addArticulo(new DiscoAdapter(disco2));
+    catalogo.addArticulo(new DiscoAdapter(disco3));
+    catalogo.addArticulo(new DiscoAdapter(disco4));
+    catalogo.addArticulo(new DiscoAdapter(disco5));
+    catalogo.addArticulo(new DiscoAdapter(disco6));
+    catalogo.addArticulo(new DiscoAdapter(disco7));
+    catalogo.addArticulo(new DiscoAdapter(disco8));
+
 
 
         Scanner scanner = new Scanner(System.in);
