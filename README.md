@@ -16,7 +16,7 @@
 Partimos de la definición dada en clase: "El patrón de diseño "Composite" te permite componer objetos en estructura de árbol para representar jerarquías Composite deja al cliente tratar objetos individuales y composiciones de objetos uniformemente." La definición anterior nos indica la necesidad de tener una jerarquía la cuál será nuestras películas y sagas. La forma en la que el cliente "trata" a ambos objetos, tanto individuales como compuestos, serían nuestros métodos que dan información como el director, género, sinopsis, precio, étc. en el caso de que no sea un objeto compuesto daría un listado de la información individual.
 
 ### Patrón **Adapter**
-Haciendo una análogía entre discos a sagas tal como canciones a películas, utilizamos el patrón Adapter para reutilizar toda nuestra estructura de "RockBuster" para "Mixdown". Realizamos una mínima modificación para poder agregar el año de estreno en nuestras canciones y discos.
+Haciendo una análogía entre discos a sagas, utilizamos el patrón Adapter para reutilizar toda nuestra estructura de "RockBuster" para "Mixdown". Realizamos una mínima modificación para poder agregar el año de estreno en nuestras canciones y discos.
 
 ---
 
