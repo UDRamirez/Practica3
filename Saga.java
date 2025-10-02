@@ -1,17 +1,17 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Saga{
+public class Saga implements Articulo{
     private String nombre;
-    private List<Articulo> peliculas;
+    private List<Articulo> articulos;
 
     public Saga(String nombre){
         this.nombre = nombre;
-        this.peliculas = new ArrayList<>();
+        this.articulos = new ArrayList<>();
     }
 
-    public void addPelicula(Pelicula Pelicula){
-        this.peliculas.add(Pelicula);
+    public void agregaElemento(Articulo articulo){
+        this.articulos.add(articulo);
     }
 
     public String getNombre(){
@@ -19,44 +19,44 @@ public class Saga{
     }
 
     public String getDirector(){
-        if (peliculas.isEmpty()) return "Sin director disponible";
+        if (articulos.isEmpty()) return "Sin director disponible";
         
         String directores = "";
         
-        for (int i = 0; i < peliculas.size(); i++) {
-            Articulo elemento = peliculas.get(i);
+        for (int i = 0; i < articulos.size(); i++) {
+            Articulo elemento = articulos.get(i);
             directores += "Director \"" + elemento.getNombre() + "\": " + elemento.getDirector() + "\n";
         }
         return directores;
     }
 
-    public int getDuracion(){
-        int duracionTotal = 0;
-        for (Articulo pelicula : peliculas) {
+    public double getDuracion(){
+        double duracionTotal = 0;
+        for (Articulo pelicula : articulos) {
             duracionTotal += pelicula.getDuracion();
         }
         return duracionTotal;
     }
 
     public String getGenero(){
-        if (peliculas.isEmpty()) return "Sin género disponible";
+        if (articulos.isEmpty()) return "Sin género disponible";
         
         String generos = "";
         
-        for (int i = 0; i < peliculas.size(); i++) {
-            Articulo elemento = peliculas.get(i);
+        for (int i = 0; i < articulos.size(); i++) {
+            Articulo elemento = articulos.get(i);
             generos += "Género \"" + elemento.getNombre() + "\": " + elemento.getGenero() + "\n";
         }
         return generos;
     }
 
     public String getSinopsis(){
-        if (peliculas.isEmpty()) return "Sin sinopsis disponible";
+        if (articulos.isEmpty()) return "Sin sinopsis disponible";
         
         String sinopsis = "";
         
-        for (int i = 0; i < peliculas.size(); i++) {
-            Articulo elemento = peliculas.get(i);
+        for (int i = 0; i < articulos.size(); i++) {
+            Articulo elemento = articulos.get(i);
             sinopsis += "Sinopsis \"" + elemento.getNombre() + "\": " + elemento.getSinopsis() + "\n";
         }
         return sinopsis;
@@ -64,7 +64,7 @@ public class Saga{
 
     public double getPrecio(){
         double precioTotal = 0;
-        for (Articulo pelicula : peliculas) {
+        for (Articulo pelicula : articulos) {
             precioTotal += pelicula.getPrecio();
         }
         return precioTotal * 0.95;
@@ -74,7 +74,7 @@ public class Saga{
         System.out.println("=== SAGA: " + nombre.toUpperCase() + " ===");
         System.out.println("Duración total: " + getDuracion() + " minutos");
         System.out.println("Precio con descuento: $" + getPrecio());
-        System.out.println("Elementos contenidos: " + peliculas.size());
+        System.out.println("Elementos contenidos: " + articulos.size());
         System.out.println("\n" + getSinopsis());
     }
 }
