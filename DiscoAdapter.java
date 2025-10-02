@@ -6,32 +6,37 @@ public class DiscoAdapter implements Producto{
         this.disco = disco;
     }
   
-String getNombre(){
+public String getNombre(){
   return disco.getNombre();
 }
   
-String getDirector(){
+public String getDirector(){
   return null;
 }
   
-String getSinopsis(){
+public String getSinopsis(){
   return null;
 }
   
-String getGenero(){
+public String getGenero(){
   return disco.getGenero();
 }
   
-double getPrecio(){
+public double getPrecio(){
   return disco.getPrecio();
 }
   
-int getDuracion(){
+public int getDuracion(){
   return 0;
 }
   
-void showInformacion();
-  
+public void showInformacion(){
+    System.out.println("\nDisco: " + disco.getNombre() +
+                           "\nArtista: " + disco.getArtista() +
+                           "\nGénero: " + disco.getGenero() +
+                           "\nAño: " + disco.getAño() +
+                           "\nPrecio: " + disco.getPrecio() + " mx");
+}  
 
   
 }
