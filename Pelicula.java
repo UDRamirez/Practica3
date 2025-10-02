@@ -40,11 +40,11 @@ public int getDuracion(){
 }
   
 public void showInformacion(){
-  System.out.println("\nPelicula: " + pelicula + 
+  System.out.println("\nPelicula: " + nombre + 
                     "\nDirección: " + director +
                     "\nDuración: " + duracion + "minutos" +
                     "\nGénero:" + genero +
-                    "\nPrecio: " + precio + "mx"
+                    "\nPrecio: " + precio + "mx" +
                     "\nTrama: " + sinopsis);
 }
 
