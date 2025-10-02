@@ -1,4 +1,4 @@
-# README - Práctica 04 - Cadena de Películas "RockBuster"
+# README - Práctica 04 - Cadena de Películas/Canciones
 
 ## Equipo: *"Los Canekitas"*
 
