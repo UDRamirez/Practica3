@@ -1,4 +1,4 @@
-public class DiscoAdapter implements Producto{
+public class DiscoAdapter implements Articulo{
 
     private Disco disco;
   
