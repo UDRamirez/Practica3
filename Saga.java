@@ -4,13 +4,14 @@ import java.util.List;
 public class Saga implements Articulo{
     private String nombre;
     private List<Articulo> articulos;
+    private String genero;
 
     public Saga(String nombre){
         this.nombre = nombre;
         this.articulos = new ArrayList<>();
     }
 
-    public void agregaElemento(Articulo articulo){
+    public void addArticulo(Articulo articulo){
         this.articulos.add(articulo);
     }
 
@@ -19,8 +20,6 @@ public class Saga implements Articulo{
     }
 
     public String getDirector(){
-        if (articulos.isEmpty()) return "Sin director disponible";
-        
         String directores = "";
         
         for (int i = 0; i < articulos.size(); i++) {
@@ -39,20 +38,10 @@ public class Saga implements Articulo{
     }
 
     public String getGenero(){
-        if (articulos.isEmpty()) return "Sin género disponible";
-        
-        String generos = "";
-        
-        for (int i = 0; i < articulos.size(); i++) {
-            Articulo elemento = articulos.get(i);
-            generos += "Género \"" + elemento.getNombre() + "\": " + elemento.getGenero() + "\n";
-        }
-        return generos;
+        return genero;
     }
 
-    public String getSinopsis(){
-        if (articulos.isEmpty()) return "Sin sinopsis disponible";
-        
+    public String getSinopsis(){ 
         String sinopsis = "";
         
         for (int i = 0; i < articulos.size(); i++) {
