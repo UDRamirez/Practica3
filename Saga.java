@@ -71,8 +71,8 @@ public class Saga implements Articulo{
     }
 
     public void showInformacion(){
-        System.out.println("=== SAGA: " + nombre.toUpperCase() + " ===");
-        System.out.println("Duración total: " + getDuracion() + " horas");
+        System.out.println("=== SAGA: " + nombre + " ===");
+        System.out.println("Duración total: " + getDuracion() + " minutos");
         System.out.println("Precio con descuento: $" + getPrecio());
         System.out.println("Elementos contenidos: " + articulos.size());
         System.out.println("\n" + getSinopsis());
