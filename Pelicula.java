@@ -15,31 +15,31 @@ public class Pelicula implements Articulo{
         this.precio = precio;
     }
   
-String getNombre(){
+public String getNombre(){
   return nombre;
 }
   
-String getDirector(){
+public String getDirector(){
   return director;
 }
   
-String getSinopsis(){
+public String getSinopsis(){
   return sinopsis;
 }
   
-String getGenero(){
+public String getGenero(){
   return genero;
 }
   
-double getPrecio(){
+public double getPrecio(){
   return precio;
 }
   
-int getDuracion(){
+public int getDuracion(){
   return duracion;
 }
   
-void showInformacion(){
+public void showInformacion(){
   System.out.println("\nPelicula: " + pelicula + 
                     "\nDirección: " + director +
                     "\nDuración: " + duracion + "minutos" +
