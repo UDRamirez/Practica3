@@ -38,4 +38,4 @@ Haciendo una análogía entre discos a sagas tal como canciones a películas, ut
 ## Descripción del Programa
 Nuestro programa despliega un menú el cuál permite acceder a toda la información de cada uno de nuestros productos o colecciones de ellos, con la posibilidad de filtrarlos por género o costo máximo.
 
--
+---
