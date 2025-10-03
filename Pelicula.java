@@ -7,22 +7,22 @@
 public class Pelicula implements Articulo {
 
     /** Nombre de la película. */
-    String nombre;
+    private String nombre;
 
     /** Nombre del director de la película. */
-    String director;
+    private String director;
 
     /** Sinopsis o trama de la película. */
-    String sinopsis;
+    private String sinopsis;
 
     /** Género de la película (ej. acción, drama, comedia). */
-    String genero;
+    private String genero;
 
     /** Precio de la película. */
-    double precio;
+    private double precio;
 
     /** Duración de la película en minutos. */
-    int duracion;
+    private int duracion;
 
     /**
      * Crea una nueva película con los datos proporcionados.
