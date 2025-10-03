@@ -73,7 +73,7 @@ public class Saga implements Articulo {
      *
      * @return la duración total en minutos
      */
-    public double getDuracion() {
+    public int getDuracion() {
         double duracionTotal = 0;
         for (Articulo pelicula : articulos) {
             duracionTotal += pelicula.getDuracion();
