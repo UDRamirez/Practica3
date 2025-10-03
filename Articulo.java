@@ -47,7 +47,7 @@ public interface Articulo {
      * 
      * @return la duración del artículo
      */
-    double getDuracion();
+    int getDuracion();
 
     /**
      * Muestra la información completa del artículo en consola.
