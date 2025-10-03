@@ -1,8 +1,30 @@
 import java.util.Scanner;
 
+/**
+ * Clase principal de la aplicación.
+ * <p>
+ * Contiene el método {@code main} que inicializa el catálogo con películas, sagas y discos,
+ * además de ofrecer un menú interactivo para que el usuario explore los artículos.
+ * </p>
+ */
 public class App {
 
-    
+    /**
+     * Método principal que ejecuta el programa.
+     * <p>
+     * Inicializa el catálogo, crea las películas, sagas y discos, los añade al catálogo,
+     * y gestiona el menú interactivo para que el usuario pueda:
+     * <ul>
+     *     <li>Ver el catálogo completo</li>
+     *     <li>Filtrar por género</li>
+     *     <li>Filtrar por costo máximo</li>
+     *     <li>Ver información detallada de un artículo</li>
+     *     <li>Salir del programa</li>
+     * </ul>
+     * </p>
+     *
+     * @param args argumentos de línea de comandos (no utilizados en esta aplicación).
+     */
     public static void main(String[] args) {
 
         Catalogo catalogo = new Catalogo();
@@ -336,16 +358,14 @@ public class App {
             27.0
         );
 
-    catalogo.addArticulo(new DiscoAdapter(disco1));
-    catalogo.addArticulo(new DiscoAdapter(disco2));
-    catalogo.addArticulo(new DiscoAdapter(disco3));
-    catalogo.addArticulo(new DiscoAdapter(disco4));
-    catalogo.addArticulo(new DiscoAdapter(disco5));
-    catalogo.addArticulo(new DiscoAdapter(disco6));
-    catalogo.addArticulo(new DiscoAdapter(disco7));
-    catalogo.addArticulo(new DiscoAdapter(disco8));
-
-
+        catalogo.addArticulo(new DiscoAdapter(disco1));
+        catalogo.addArticulo(new DiscoAdapter(disco2));
+        catalogo.addArticulo(new DiscoAdapter(disco3));
+        catalogo.addArticulo(new DiscoAdapter(disco4));
+        catalogo.addArticulo(new DiscoAdapter(disco5));
+        catalogo.addArticulo(new DiscoAdapter(disco6));
+        catalogo.addArticulo(new DiscoAdapter(disco7));
+        catalogo.addArticulo(new DiscoAdapter(disco8));
 
         Scanner scanner = new Scanner(System.in);
         boolean salir = false;
@@ -387,6 +407,5 @@ public class App {
             }
         }
         scanner.close();
-
     }
 }
