@@ -97,12 +97,7 @@ public class Saga implements Articulo {
      * @return una cadena con las sinopsis de cada artículo
      */
     public String getSinopsis() {
-        String sinopsis = "";
-        for (int i = 0; i < articulos.size(); i++) {
-            Articulo elemento = articulos.get(i);
-            sinopsis += "Sinopsis \"" + elemento.getNombre() + "\": " + elemento.getSinopsis() + "\n";
-        }
-        return sinopsis;
+       return null;
     }
 
     /**
