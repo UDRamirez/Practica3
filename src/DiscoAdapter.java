@@ -35,7 +35,7 @@ public class DiscoAdapter implements Articulo {
      * </p>
      */
     public String getDirector() {
-        return null;
+        return disco.getArtista();
     }
 
     /**
