@@ -30,7 +30,8 @@ Haciendo una análogía entre discos a sagas, utilizamos el patrón Adapter para
   ```
   java src/App.java
   ```
-# Alternativamente se puede usar docker para su compilación y ejecución:
+---
+### Alternativamente se puede usar docker para su compilación y ejecución:
   Se construye la imagen con:
   ```
   sudo docker build -t practica4-java .
