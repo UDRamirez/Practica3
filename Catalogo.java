@@ -1,22 +1,34 @@
 import java.util.*;
 
+/**
+ * Clase que representa un catálogo de artículos.
+ * Permite almacenar, mostrar y filtrar artículos como películas, discos o sagas.
+ */
 public class Catalogo {
 
     private List<Articulo> articulos = new ArrayList<>();
     private List<Articulo> articulosEsp = new ArrayList<>();
 
+    /**
+     * Agrega un artículo al catálogo.
+     * @param art artículo a agregar
+     */
     public void addArticulo(Articulo art) {
         articulos.add(art);
     }
 
+    /**
+     * Muestra todos los artículos disponibles en el catálogo.
+     * Incluye artículos individuales y los contenidos en sagas, sin duplicados.
+     */
     public void mostrarCatalogo() {
         articulosEsp = new ArrayList<>();
         List<Articulo> todos = new ArrayList<>();
 
         for (Articulo art : articulos) {
-            obtenerArticulosRecursivosSinDuplicados(art, todos);
+            sinDuplicados(art, todos);
             if (!todos.contains(art)) {
-                todos.add(art);  // Agregar saga u artículo raíz si no está
+                todos.add(art);  
             }
         }
 
@@ -30,12 +42,16 @@ public class Catalogo {
         System.out.println("Saliendo del catálogo...");
     }
 
+    /**
+     * Filtra los artículos del catálogo por género.
+     * @param genero género a filtrar
+     */
     public void filtarPorGenero(String genero) {
         articulosEsp = new ArrayList<>();
         List<Articulo> todos = new ArrayList<>();
 
         for (Articulo art : articulos) {
-            obtenerArticulosRecursivosSinDuplicados(art, todos);
+            sinDuplicados(art, todos);
             if (!todos.contains(art)) {
                 todos.add(art);
             }
@@ -52,12 +68,16 @@ public class Catalogo {
         System.out.println("Saliendo del catálogo...");
     }
 
+    /**
+     * Filtra los artículos del catálogo por precio máximo.
+     * @param max precio máximo
+     */
     public void filtarPorCosto(double max) {
         articulosEsp = new ArrayList<>();
         List<Articulo> todos = new ArrayList<>();
 
         for (Articulo art : articulos) {
-            obtenerArticulosRecursivosSinDuplicados(art, todos);
+            sinDuplicados(art, todos);
             if (!todos.contains(art)) {
                 todos.add(art);
             }
@@ -74,11 +94,15 @@ public class Catalogo {
         System.out.println("Saliendo del catálogo...");
     }
 
+    /**
+     * Muestra la información de un artículo específico por nombre.
+     * @param nombre nombre del artículo
+     */
     public void mostrarArticulo(String nombre) {
         List<Articulo> todos = new ArrayList<>();
 
         for (Articulo art : articulos) {
-            obtenerArticulosRecursivosSinDuplicados(art, todos);
+            sinDuplicados(art, todos);
             if (!todos.contains(art)) {
                 todos.add(art);
             }
@@ -96,10 +120,17 @@ public class Catalogo {
             System.out.println("No se encontró el artículo.");
     }
 
+    /**
+     * Obtiene la lista de artículos raíz en el catálogo.
+     * @return lista de artículos raíz
+     */
     public List<Articulo> getArticulos() {
         return articulos;
     }
 
+    /**
+     * Permite al usuario seleccionar un artículo mostrado para ver más detalles.
+     */
     private void seleccionar() {
         System.out.println("Si desea obtener más información sobre algún artículo, ingrese su nombre.");
         System.out.println("n o vacío para salir");
@@ -128,12 +159,17 @@ public class Catalogo {
         }
     }
 
-    // 🔧 Método actualizado que evita duplicados al recorrer recursivamente
-    private void obtenerArticulosRecursivosSinDuplicados(Articulo art, List<Articulo> resultado) {
+    /**
+     * Obtiene recursivamente todos los artículos de un artículo (ej. los contenidos de una saga),
+     * evitando duplicados.
+     * @param art artículo raíz
+     * @param resultado lista acumulada de artículos sin duplicados
+     */
+    private void sinDuplicados(Articulo art, List<Articulo> resultado) {
         if (art instanceof Saga) {
             Saga saga = (Saga) art;
             for (Articulo contenido : saga.getArticulos()) {
-                obtenerArticulosRecursivosSinDuplicados(contenido, resultado);
+                sinDuplicados(contenido, resultado);
             }
         } else {
             if (!resultado.contains(art)) {
@@ -142,6 +178,13 @@ public class Catalogo {
         }
     }
 
+    /**
+     * Obtiene el tipo de un artículo (Pelicula, Disco, Saga o Articulo).
+     * @param a artículo a evaluar
+     * @return tipo en forma de texto
+     */
+
+    //Se añadio esto porque era dificil diferenciar que cosa era que
     private String obtenerTipo(Articulo a) {
         if (a instanceof Pelicula) return "PELÍCULA";
         if (a instanceof DiscoAdapter) return "DISCO";
