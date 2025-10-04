@@ -30,6 +30,8 @@ Haciendo una análogía entre discos a sagas, utilizamos el patrón Adapter para
   ```
   java src/App.java
   ```
+*NOTA: Comando utilizado en Linux y con la versión Java 23 (JDK 23)*
+
 ---
 ### Alternativamente se puede usar docker para su compilación y ejecución:
   Se construye la imagen con:
@@ -39,8 +41,8 @@ Haciendo una análogía entre discos a sagas, utilizamos el patrón Adapter para
   Se ejecuta el contenedor con:
   ```
   sudo docker run -it --name practica4-container practica4-java
+  ```
 
-*NOTA: Comando utilizado en Linux y con la versión Java 23 (JDK 23)*
 
 ---
 
