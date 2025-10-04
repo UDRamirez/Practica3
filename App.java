@@ -139,12 +139,27 @@ public class App {
         trilogiaDeSecuelas.addArticulo(SW3ii);
         trilogiaDeSecuelas.addArticulo(SW3iii);
 
+	catalogo.addArticulo(trilogiaDePrecuelas);
+	catalogo.addArticulo(trilogiaOriginal);
+	catalogo.addArticulo(trilogiaDeSecuelas);
+	
         StarWars.addArticulo(trilogiaDePrecuelas);
-        StarWars.addArticulo(trilogiaDePrecuelas);
-        StarWars.addArticulo(trilogiaDePrecuelas);
+        StarWars.addArticulo(trilogiaOriginal);
+        StarWars.addArticulo(trilogiaDeSecuelas);
         StarWars.addArticulo(SWni);
 
         catalogo.addArticulo(StarWars);
+
+	Pelicula TR = new Pelicula(
+            "Thunderbolts*",
+            "Jake Schreier",
+            126,
+            "Acción",
+            "Un grupo de antiheroés se unen, en contra de su voluntad,  ante una amenaza que podría acabar con el mundo",
+            60.0
+        );
+
+	catalogo.addArticulo(TR);
 
         Saga wesAnderson = new Saga("Películas de Wes Anderson", "Comedia");
 
@@ -303,10 +318,10 @@ public class App {
         );
 
         Disco disco2 = new Disco(
-            "Kind of Blue",
-            "Miles Davis",
-            "Jazz",
-            1959,
+            "<|°_°|>",
+            "Caravan Palace",
+            "Electroswing",
+            2015,
             30.0
         );
 
@@ -327,10 +342,10 @@ public class App {
         );
 
         Disco disco5 = new Disco(
-            "Beethoven: Symphony No. 9",
-            "Ludwig van Beethoven",
-            "Clásica",
-            1824,
+            "Crystal Castles II",
+            "Crystal Castles",
+            "Experimental",
+            2010,
             18.0
         );
 
@@ -343,10 +358,10 @@ public class App {
         );
 
         Disco disco7 = new Disco(
-            "Legend",
-            "Bob Marley",
-            "Reggae",
-            1984,
+            "ODYSSÉE",
+            "L'Impératrice",
+            "Pop",
+            2015,
             20.0
         );
 
@@ -371,6 +386,7 @@ public class App {
         boolean salir = false;
 
         while (!salir) {
+	    System.out.println("Bienvenido a la plataforma de RockBuster");
             System.out.println("\n---- MENU ----");
             System.out.println("1. Ver el catálogo completo");
             System.out.println("2. Filtrar por género");
