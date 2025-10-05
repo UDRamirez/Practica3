@@ -395,6 +395,7 @@ public class App {
             System.out.println("5. Salir");
             System.out.print("Ingrese una opción: ");
             int opcion = scanner.nextInt();
+	    scanner.nextLine();
             switch (opcion) {
                 case 1:
                     catalogo.mostrarCatalogo();
@@ -411,7 +412,7 @@ public class App {
                     break;
                 case 4:
                     System.out.print("Ingrese el nombre del artículo: ");
-                    String nombreArticulo = scanner.next();
+                    String nombreArticulo = scanner.nextLine();
                     catalogo.mostrarArticulo(nombreArticulo);
                     break;
                 case 5:
