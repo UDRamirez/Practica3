@@ -1,6 +1,7 @@
-# README - Práctica 04 - Cadena de Películas/Canciones
+# README Práctica 04 Cadena de Películas/Canciones
 
-## Equipo: *"Los Canekitas"*
+
+## Equipo *Los Canekitas*
 
 | Nombre                          | Número de Cuenta |
 |---------------------------------|------------------|
